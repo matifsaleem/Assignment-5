@@ -221,7 +221,7 @@ print(user1[i]);
 // }
 */
 // Q6:  Write a program in Dart to calculate power of a certain numbers using function only.
-
+/*
 void main() {
   powerOfnumbers();
 }
@@ -229,20 +229,20 @@ void main() {
 powerOfnumbers() {
   List<int> myList = [];
   List<int> powerList = [];
+  var power;
   stdout.write("Enter the List Lenght Number: ");
   int? n = int.parse(stdin.readLineSync()!);
   for (int i = 0; i < n; i++) {
-    
     myList.add(i);
 
-  //powerList.add(pow(myList[i], 2));
-  print(pow(myList[i],2));
+    power = pow(myList[i], 2);
+    powerList.add(power);
   }
 
-  print(myList);
-
+  print("List before getting power: ${myList}");
+  print("List after getting power: ${powerList}");
 }
-
+*/
 //Q7: Write a function to calculate number of vowels and consonant in a String.
 /*
 void main() {
