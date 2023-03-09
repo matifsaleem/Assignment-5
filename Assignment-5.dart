@@ -27,7 +27,7 @@ existFriday() {
     'Sat': 6000,
     'Sun': 7000
   };
-  print("Before Charges of Friday Value: $expanses");
+  print("Before Change of Friday Value: $expanses");
   if (expanses.containsKey("Fri")) {
     expanses['Fri'] = 5000.0;
   } else {
@@ -35,7 +35,7 @@ existFriday() {
   }
 
   stdout.writeln();
-  print("After Charges of Friday Value: $expanses");
+  print("After Change of Friday Value: $expanses");
 }
 */
 
