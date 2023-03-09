@@ -33,7 +33,6 @@ existFriday() {
   } else {
    
   }
-
   stdout.writeln();
   print("After Change of Friday Value: $expanses");
 }
@@ -53,7 +52,7 @@ void main() {
 areaOfcircle() {
   double pi = 3.14159;
   double area;
-  stdout.write("Enter Diameter of Circle: ");
+  stdout.write("Enter Diameter of Circle [First Method]: ");
   double? n = double.parse(stdin.readLineSync()!);
   double radiusOfcircle = n / 2;
   area = pi * radiusOfcircle * radiusOfcircle;
@@ -64,7 +63,7 @@ areaOfcircle() {
 areaOfcircle1() {
   double pi = 3.14159;
   double area;
-  stdout.write("Enter Diameter of Circle: ");
+  stdout.write("Enter Diameter of Circle [Second Method]: ");
   double? n = double.parse(stdin.readLineSync()!);
   double radiusOfcircle = n / 2;
   area = pi * pow(radiusOfcircle, 2);
@@ -174,13 +173,13 @@ reverseFunction() {
 
 
 
-/*
+
 // "Q5: Write a program in Dart to signup user by using username, email & password as required fields 
 //while  phoneNumber is optional using function, call this function at least 3 times to create different 
 //users. Now create another function named as loginUser and then try to login with correct & incorrect 
 //credentials");
 
-
+/*
 void main() {
   signUp();
 }
