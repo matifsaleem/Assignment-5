@@ -200,84 +200,66 @@ signUp() {
     stdout.write("Enter your username:");
     username = stdin.readLineSync()!;
     users[i]['username'] = username;
-    // print(users[0]['username']);
 
-    users[i]['username'] = username;
-    //print(users[1]['username']);
-
-    users[i]['username'] = username;
-    //print(users[2]['username']);
 //------------------------------------------------
 
     stdout.write("Enter your email:");
     email = stdin.readLineSync()!;
     users[i]['email'] = email;
-    //print(users[0]['email']);
-
-    users[i]['email'] = email;
-    //print(users[1]['email']);
-
-    users[i]['email'] = email;
-    //print(users[2]['email']);
 
 //----------------------------------------------
     stdout.write("Enter your password:");
     password = stdin.readLineSync()!;
 
     users[i]['password'] = password;
-    //print(users[0]['password']);
-
-    users[i]['password'] = password;
-    //print(users[1]['password']);
-
-    users[i]['password'] = password;
-    //print(users[2]['password']);
 
 //-----------------------------------------------------
     stdout.write("Enter your phone number (optional):");
     phoneNumber = stdin.readLineSync()!;
 
     users[i]['phoneNumber'] = phoneNumber;
-    //print(users[0]['phoneNumber']);
 
-    users[i]['phoneNumber'] = phoneNumber;
-    //print(users[1]['phoneNumber']);
-
-    users[i]['phoneNumber'] = phoneNumber;
-    print(users[2]['phoneNumber']);
     print("User created successfully!");
     print("Username: ${users[i]['username']}");
     print("Email: ${users[i]['email']}");
     print("Phone number: ${users[i]['phoneNumber']}");
     stdout.writeln();
-    // loginUser(users[i]['email'], users[i]['password']);
-    // stdout.writeln();
   }
-  loginUser(users[0]['email'], users[0]['password']);
-  loginUser(users[1]['email'], users[1]['password']);
-  loginUser(users[2]['email'], users[2]['password']);
+
+  loginUser(users);
 }
 
-void loginUser(String email, String password) {
+void loginUser(users) {
   stdout.writeln();
   print("*** Welcome Login Portal ***");
   stdout.writeln();
-  stdout.write("Enter your enter email:");
-  String enterEmail = stdin.readLineSync()!;
+   stdout.write("Enter your enter email:");
+    String enterEmail = stdin.readLineSync()!;
 
-  stdout.write("Enter your enter password:");
-  String enterPassword = stdin.readLineSync()!;
-
-  if (email == enterEmail && password == enterPassword) {
-    print("Login successful!");
-    stdout.writeln();
-  } else {
-    print("Incorrect email or password. Please try again.");
-    stdout.writeln();
+    stdout.write("Enter your enter password:");
+    String enterPassword = stdin.readLineSync()!;
+  for (int i = 0; i < 3; i++) {
+ 
+    if (users[i]?['email'] == enterEmail &&
+        users[i]?['password'] == enterPassword) {
+      stdout.writeln();
+      print("Wellcome: $enterEmail");
+      stdout.writeln();
+      break;
+    } else 
+      stdout.writeln();
+      print("Incorrect email or password. Please try again.");
+      stdout.writeln();
+      loginUser(users);
+      break;
+     
+    
   }
+  
 }
-
 */
+
+
 
 /*
 // Q6:  Write a program in Dart to calculate power of a certain numbers using function only.
